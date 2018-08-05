@@ -1,0 +1,51 @@
+<html>
+<!--
+Return cars and generate bill
+-->
+<html>
+    <head>
+        <title>Car Rental </title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+     
+    </head>
+    <body>
+		<br><IMG SRC="logo.png" WIDTH=330 HEIGHT=200><br><br>
+    
+  </div>
+		<div class="menu">
+  	<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="customer2.html">Customers</a></li>
+        <li><a href="book2.html">Car Booking</a></li>
+		<li id="active"><a href="">Car Returning</a></li>
+        <li><a href="location.html">Contact Us</a></li>
+    </ul>
+  </div>
+	
+<div class="leftContent">
+    <b><form action="return.php" method="post" style="color:black">
+    <h1> RENTAL BILL </h1><br><br>
+    <table width="450px" style="font-size:20px">
+        <tr>
+            <td valign="top">
+                <label for="nric" style="color:black">Enter NRIC : </label>
+            </td>
+            <td valign="top">
+                <input type="text" name="nric" style="width:230px;height:20px;font-size:15;" maxlength="50" size="30" placeholder="S8392831G" required="required" pattern="^[STFG]\d{7}[A-Z]$" title="At least 5 letters and numbers">
+            </td>
+        </tr>
+    
+        <tr>
+            <td height="25">
+                <label for="nric"></label>
+            </td>
+            <td height="25">
+                    <input type="submit" style="width:230px;height:20px;font-size:35;" name="enter" value="Enter">
+            </td>
+        </tr>
+    
+    
+        </table>
+        </form></b><br>
+	</body>
+	</html>
