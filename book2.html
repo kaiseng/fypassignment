@@ -1,0 +1,174 @@
+<html>
+<!--
+Book cars based availability
+-->
+<html>
+    <head>
+        <title>Car Rental </title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+    </head>
+    <body>
+		<br><IMG SRC="logo.png" WIDTH=330 HEIGHT=200><br><br>
+    
+  </div>
+		<div class="menu">
+  	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="customer2.html">Customers</a></li>
+        <li id="active"><a href="">Car Booking</a></li>
+		<li><a href="return2.html">Car Returning</a></li>
+		<li><a href="location.html">Contact Us</a></li>
+		
+    </ul>
+  </div>
+	
+<div class="leftContent">
+    <b><form action="available2.php" method="post" style="color:black">
+		<h1> BOOK A CAR </h1><br>
+		
+		<table width="450px" style="font-size:20px">
+				<tr>
+					<td valign="top">
+						<label for="nric" style="color:black">NRIC : </label>
+					</td>
+					<td valign="top">
+						<input type="text" name="nric" style="width:200px;height:20px;font-size:15;" maxlength="50" size="30" placeholder="S8392831G" required="required" pattern="^[STFG]\d{7}[A-Z]$" title="At least 5 letters and numbers">
+					</td>
+				</tr>
+				<tr>
+					<td height="50" style="color:black">Select Car type : </td>
+					<td>
+							<select name = "Ctype" onchange="carType()" id='car' style="width:200px;height:50px;font-size:50;">
+									<option value='Medium'>Medium </option>
+									<option value='Compact'>Compact</option>
+									<option value='Large'>Large</option>
+									<option value='SUV'>SUV</option>
+									<option value='Van'>Van</option>
+									<option value='Truck'>Truck</option>
+								</select>
+					</td>
+				</tr>
+				<tr>
+					<td height="25" style="color:black">No of days :</td> 
+					<td>
+						<select name = "Days">
+							<option value="1">1 </option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+						<input type="submit" style="width:200px;height:50px;font-size:50;" name="check" value="Check Availability">
+					</td>
+				</tr>
+				<tr>
+					<td height="55">
+						<label for="Vehicleid" style="color:black">Enter Vehicle id : </label>
+					</td>
+					<td height="55">
+						<input type="text" style="width:200px;height:20px;font-size:15;" name="Vehicleid" placeholder="8395" maxlength="50" size="30" >
+					</td>
+				</tr>
+				<tr>
+						<td height="25">
+							<label for="Vehicleid"></label>
+						</td>
+						<td height="25">
+								<input type="submit" style="width:210px;height:60px;font-size:200;" name="book" value="Book">
+						</td>
+					</tr>
+				</table>
+				
+</form></b><br>
+
+<form name="payform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"> 
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<table>
+	<tr><td><input type="hidden" name="on0" value="Medium"><div id='carTypeDisplay' style="width:210px;height:30px;font-size:25;color:black">Medium</div></td></tr><tr><td><select name="os0" style="width:170px;font-size:25;">
+		<option value="1 day">1 day $500.00 SGD</option>
+		<option value="2 days">2 days $1,000.00 SGD</option>
+		<option value="3 days">3 days $1,500.00 SGD</option>
+		<option value="4 days">4 days $2,000.00 SGD</option>
+		<option value="5 days">5 days $2,500.00 SGD</option>
+		<option value="6 days">6 days $3,000.00 SGD</option>
+		<option value="7 days">7 days $3,500.00 SGD</option>
+	</select> </td></tr>
+	</table>
+	<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+	">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+	
+
+<br>
+
+    </div>	
+	
+	
+		
+		<style>
+		.wrapper {
+			display: grid;
+			grid-template-columns: 200px 200px 200px;
+			grid-auto-rows: minmax(160px, auto);
+			padding: 45px;
+		}
+		</style>
+
+<div class="wrapper">
+<div>
+		<a href="book2.html"> <img src="images/bmw.png" alt="bmw"  height="150" border="2px" style="width:190"></a>
+</div>
+<div>
+		<a href="book2-1.html"><img src="images/audi.png" alt="audi"  height="150" border="2px" style="width:190"></a>
+</div>
+<div>
+		<a href="book2-2.html"><img src="images/mini.png" alt="mini"  height="150" border="2px" style="width:190"></a>
+</div>
+<div>
+		<a href="book2-3.html"><img src="images/toyota.png" alt="toyota" height="150" border="2px" style="width:190"></a>
+</div>
+<div>
+		<a href="book2-4.html"> <img src="images/99.png" alt="99" height="150" border="2px" style="width:190"></a>
+</div>
+<div>
+		<a href="book2-5.html"> <img src="images/van.png" alt="van" height="150" border="2px" style="width:190"></a>
+</div>
+
+
+	</body>
+	<script>
+			function carType(){
+			var carId = document.getElementById('car').value;
+
+			
+			switch(carId)
+			{
+			case 'Medium':
+			  url = 'book2.html';
+			  break;
+			case 'Compact':
+			  url = 'book2-2.html';
+			  break;
+			case 'Large':
+			  url = 'book2-3.html';
+			  break;
+			  case 'SUV':
+			 url = 'book2-1.html';
+			  break;
+			  case 'Van':
+			  url = 'book2-5.html';
+			  break;
+			  case 'Truck':
+			  url = 'book2-4.html';
+			  break;
+			}
+			window.location.href= url;
+		}
+		</script>
+	</html>
