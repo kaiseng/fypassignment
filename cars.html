@@ -1,0 +1,112 @@
+<html>
+<!--
+Add and view cars, Update rates
+-->
+<html>
+    <head>
+        <title>Car Rental </title>
+        <link href="pstyles.css" rel="stylesheet" type="text/css" />
+     
+    </head>
+    <body>
+		<br><IMG SRC="logo.png" WIDTH=330 HEIGHT=200><br><br>
+    
+  </div>
+		<div class="menu">
+  	<ul>
+		<li><a href="homepage.html">Home</a></li>
+		<li><a href="customer.html">Customers</a></li>
+        <li id="active"><a href="">Cars</a></li>
+        <li><a href="book.html">Car Booking</a></li>
+		<li><a href="return.html">Car Returning</a></li>
+		<li><a href="report.html">Report</a></li>
+		<li><a href="location.html">Contact Us</a></li>
+    </ul>
+  </div>
+	
+  
+<div class="leftContent">
+    <b><form action="registercar.php" method="post" style="color:black">
+	<h1> ADD CAR </h1>
+	
+	<table width="450px" style="font-size:20px">
+			<tr>
+				<td height="40">
+					<label for="License No" style="color:black">License No : </label>
+				</td>
+				<td height="40">
+					<input type="text" name="lno" style="width:200px;height:20px;font-size:15;" maxlength="50" size="30" placeholder="abc1940jof">
+				</td>
+			</tr>
+
+			<tr>
+				<td height="40">
+					<label for="Model" style="color:black">Model : </label>
+				</td>
+				<td height="40">
+					<input type="text" name="model" style="width:200px;height:20px;font-size:15;" maxlength="50" size="30" placeholder="Toyota Vios">
+				</td>
+			</tr>
+
+
+			<tr>
+				<td height="40">
+					<label for="Year" style="color:black">Year : </label>
+				</td>
+				<td height="40">
+					<input type="text" name="year" style="width:200px;height:20px;font-size:15;" maxlength="50" size="30" placeholder="2018-07-08">
+				</td>
+			</tr>
+
+
+
+			<tr>
+				<td height="40" style="color:black">Select Car type : </td>
+				<td>
+						<select name = "Cartype" style="width:200px;height:50px;font-size:50;">
+								<option value='Medium'>Medium </option>
+								<option value='Compact'>Compact</option>
+								<option value='Large'>Large</option>
+								<option value='SUV'>SUV</option>
+								<option value='Van'>Van</option>
+								<option value='Truck'>Truck</option>
+							</select>
+				</td>
+			</tr>
+
+			<tr>
+					<td height="40">
+						<label for="Daily_Rate" style="color:black">Daily Rate : </label>
+					</td>
+					<td height="40">
+						<input type="text" style="width:200px;height:20px;font-size:15;" name="daily_rate" placeholder="$500" maxlength="50" size="30" >
+					</td>
+				</tr>
+
+			<tr>
+					<td height="40">
+						<label for="Ctype"></label>
+					</td>
+					<td height="40">
+							<input type="submit" style="width:200px;height:60px;font-size:200;" name="submit" value="Register">
+					</td>
+				</tr>
+				
+			</table>
+			
+</form></b><br>
+    </div>	
+	
+	<br><br><br>
+	<div class="rightContent" style="color:black">
+	<h1> VIEW CARS RATES</h1>
+	<form action="viewcar.php" method="post">
+	
+<input type="submit" name="submit1" value="View" style="width:220px;height:20px;font-size:30;">
+</form>
+
+
+	</div>
+	
+	</body>
+	</html>
