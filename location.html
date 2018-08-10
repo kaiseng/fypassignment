@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <button style="padding:10px 20px;border:none" onclick="goBack()">Go Back</button>
+      <script>
+      function goBack() {
+          window.history.back();
+      }
+      </script>
+    <title>Place details</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <h1>Contact Form</h1>
+    <style>
+      
+      #map {
+        height:70%;
+        width:55%;
+        float:left;
+      }
+     
+      html, body {
+        height: 100%;
+        margin: 100;
+        padding: 0;
+      }
+      body  {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:20px;
+        color:#FF7F50;
+        background-image: url(form.png);
+}
+      
+    </style>
+    <script>
+     
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 1.3335, lng: 103.9595},
+          zoom: 15
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({
+          placeId: 'ChIJuWpgQNY82jERKhla73UqxFo'
+        }, function(place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                'Place ID: ' + place.place_id + '<br>' +
+                place.formatted_address + '</div>');
+              infowindow.open(map, this);
+            });
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZw5lqMDuRnTMHj23UMPgWU7R_YEjq-NI&libraries=places&callback=initMap">
+    </script>
+  </body>
+
+  <form name="htmlform" method="post" action="form_send.php">
+    <CENTER>
+      <table style="padding: 10px 20px" width="450px">
+        
+      </tr>
+      <tr>
+       <td valign="top">
+        <label for="first_name">First Name *</label>
+        
+       </td>
+       <td valign="top">
+        <input  type="text" name="first_name" maxlength="50" size="30">
+       </td>
+      </tr>
+      
+      <tr>
+       <td valign="top">
+        <label for="last_name">Last Name *</label>
+       </td>
+       <td valign="top">
+        <input  type="text" name="last_name" maxlength="50" size="30">
+       </td>
+      </tr>
+      <tr>
+       <td valign="top">
+        <label for="email">Email Address *</label>
+       </td>
+       <td valign="top">
+        <input  type="text" name="email" maxlength="80" size="30">
+       </td>
+      
+      </tr>
+      <tr>
+       <td valign="top">
+        <label for="telephone">Telephone Number</label>
+       </td>
+       <td valign="top">
+        <input  type="text" name="telephone" maxlength="30" size="30">
+       </td>
+      </tr>
+      <tr>
+       <td valign="top">
+        <label for="messages">Messages *</label>
+       </td>
+       <td valign="top">
+        <textarea  name="messages" maxlength="1000" cols="25" rows="6"></textarea>
+       </td>
+      </tr>
+
+      <tr>
+          <td height="25">
+              <label for="nric"></label>
+          </td>
+          <td height="25">
+                  <input type="submit" style="width:220px;height:20px;font-size:35;" value="Submit">
+          </td>
+      </tr>
+      </table>
+      </form>
+
+</html>
