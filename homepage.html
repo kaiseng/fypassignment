@@ -1,0 +1,144 @@
+<html>
+<!--
+Final Year Project - Car Rental website
+@author - Kai Seng
+-->
+<html>
+    <head>
+        <title>Car Rental </title>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		 
+		 <div id="container"> 
+  <br class="clearfloat" />
+  <!-- begin #header -->
+  <div id="header">
+        <IMG SRC="logo.png" WIDTH=330 HEIGHT=200><br>
+  </div>
+
+  <div class="menu">
+  	<ul>
+        <li id="active"><a href="">Home</a></li>
+        <li><a href="customer.html">Customers</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="book.html">Car Booking</a></li>
+		<li><a href="return.html">Car Returning</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="location.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="slide.css">
+    <style>
+    .mySlides {
+        display: block;
+margin-left: auto;
+margin-right: auto;
+    }
+    
+    </style>
+    <body>
+      <img class="mySlides" src="images/bmw.png" style="width:45%; border-style:solid; border-width:0px; height:40vh">
+      <img class="mySlides" src="images/audi.png" style="width:45%;border-style:solid; border-width:0px; height:40vh">
+      <img class="mySlides" src="images/mini.png" style="width:45%;border-style:solid; border-width:0px; height:40vh">
+      <img class="mySlides" src="images/9.png" style="width:45%;border-style:solid; border-width:0px; height:40vh">
+      <img class="mySlides" src="images/99.png" style="width:45%;border-style:solid; border-width:0px; height:40vh">
+      <img class="mySlides" src="images/van.png" style="width:45%;border-style:solid; border-width:0px; height:40vh">
+    </div>
+    
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+    </body>
+    </html>
+
+  <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .column {
+            float: left;
+            width: 14.50%;
+            padding: 26px;
+        }
+        
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 200px) {
+            .column {
+                width: 100%;
+            }
+            
+        }
+       
+        </style>
+        </head>
+        <body>
+
+                <div class="row">
+                        <div class="column">
+                          <a href="book.html"> <img src="images/bmw.png" alt="bmw" style="width:120%"></a>
+                        </div>
+
+                <div class="column">
+                          <a href="book2(D1).html"><img src="images/audi.png" alt="audi" style="width:120%"></a>
+                        </div>
+
+                <div class="column">
+                          <a href="book2(D2).html"><img src="images/mini.png" alt="mini" style="width:120%"></a>
+                        </div>
+
+                <div class="column">
+                                <a href="book2(D3).html"><img src="images/toyota.png" alt="toyota" style="width:130%"></a>
+                              </div>
+                              
+                <div class="column">
+                                    <a href="book2(D4).html"> <img src="images/99.png" alt="99" style="width:130%"></a>
+                                  </div>
+
+                <div class="column">
+                                    <a href="book2(D5).html"> <img src="images/van.png" alt="van" style="width:155%"></a>
+                                  </div>           
+                      </div>   
+                      
+  </div>
+  <!-- end #header -->
+  
+    <br class="clearfloat" />
+	<!-- begin #footer -->
+  <div id="footer">
+    <p>
+        Created by Kai Seng
+    </p>
+    </div>
+    <!-- end #footer -->
+  </div>
+</div>
+<!-- end #container -->
+                
+</body>
+</html>
